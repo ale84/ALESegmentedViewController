@@ -7,12 +7,30 @@
 //
 
 #import "ALEAppDelegate.h"
+#import "ALESegmentedViewController.h"
+#import "FirstViewController.h"
+#import "SecondViewController.h"
 
 @implementation ALEAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
+    FirstViewController *first = [[FirstViewController alloc]initWithNibName:@"FirstViewController" bundle:nil];
+    SecondViewController *second = [[SecondViewController alloc]initWithNibName:@"SecondViewController" bundle:nil];
+    
+    ALESegmentedViewController *segmentedViewController = [[ALESegmentedViewController alloc]init];
+    segmentedViewController.viewControllers = @[first, second];
+    
+    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:segmentedViewController];
+    
+    self.window.rootViewController = navController;
+    
     return YES;
 }
 							

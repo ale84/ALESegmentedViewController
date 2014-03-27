@@ -1,5 +1,5 @@
 //
-//  ALEViewController.h
+//  SecondViewController.h
 //  SegmentedViewController
 //
 //  Created by Alessio on 27/03/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ALEViewController : UIViewController
+@interface SecondViewController : UIViewController
 
 @end

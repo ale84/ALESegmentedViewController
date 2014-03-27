@@ -13,15 +13,17 @@
 		CABFE93218E46D1D00D5E1C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CABFE93018E46D1D00D5E1C0 /* InfoPlist.strings */; };
 		CABFE93418E46D1D00D5E1C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CABFE93318E46D1D00D5E1C0 /* main.m */; };
 		CABFE93818E46D1D00D5E1C0 /* ALEAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CABFE93718E46D1D00D5E1C0 /* ALEAppDelegate.m */; };
-		CABFE93B18E46D1D00D5E1C0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABFE93918E46D1D00D5E1C0 /* Main_iPhone.storyboard */; };
-		CABFE93E18E46D1D00D5E1C0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABFE93C18E46D1D00D5E1C0 /* Main_iPad.storyboard */; };
-		CABFE94118E46D1D00D5E1C0 /* ALEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABFE94018E46D1D00D5E1C0 /* ALEViewController.m */; };
 		CABFE94318E46D1D00D5E1C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABFE94218E46D1D00D5E1C0 /* Images.xcassets */; };
 		CABFE94A18E46D1D00D5E1C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABFE94918E46D1D00D5E1C0 /* XCTest.framework */; };
 		CABFE94B18E46D1D00D5E1C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABFE92718E46D1D00D5E1C0 /* Foundation.framework */; };
 		CABFE94C18E46D1D00D5E1C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABFE92B18E46D1D00D5E1C0 /* UIKit.framework */; };
 		CABFE95418E46D1D00D5E1C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CABFE95218E46D1D00D5E1C0 /* InfoPlist.strings */; };
 		CABFE95618E46D1D00D5E1C0 /* SegmentedViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CABFE95518E46D1D00D5E1C0 /* SegmentedViewControllerTests.m */; };
+		CABFE96218E46D5D00D5E1C0 /* ALESegmentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABFE96118E46D5D00D5E1C0 /* ALESegmentedViewController.m */; };
+		CABFE96618E46DEF00D5E1C0 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABFE96418E46DEF00D5E1C0 /* FirstViewController.m */; };
+		CABFE96718E46DEF00D5E1C0 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABFE96518E46DEF00D5E1C0 /* FirstViewController.xib */; };
+		CABFE96B18E46E2700D5E1C0 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABFE96918E46E2700D5E1C0 /* SecondViewController.m */; };
+		CABFE96C18E46E2700D5E1C0 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABFE96A18E46E2700D5E1C0 /* SecondViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,16 +47,20 @@
 		CABFE93518E46D1D00D5E1C0 /* SegmentedViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SegmentedViewController-Prefix.pch"; sourceTree = "<group>"; };
 		CABFE93618E46D1D00D5E1C0 /* ALEAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALEAppDelegate.h; sourceTree = "<group>"; };
 		CABFE93718E46D1D00D5E1C0 /* ALEAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALEAppDelegate.m; sourceTree = "<group>"; };
-		CABFE93A18E46D1D00D5E1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		CABFE93D18E46D1D00D5E1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		CABFE93F18E46D1D00D5E1C0 /* ALEViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALEViewController.h; sourceTree = "<group>"; };
-		CABFE94018E46D1D00D5E1C0 /* ALEViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALEViewController.m; sourceTree = "<group>"; };
 		CABFE94218E46D1D00D5E1C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CABFE94818E46D1D00D5E1C0 /* SegmentedViewControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SegmentedViewControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABFE94918E46D1D00D5E1C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CABFE95118E46D1D00D5E1C0 /* SegmentedViewControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SegmentedViewControllerTests-Info.plist"; sourceTree = "<group>"; };
 		CABFE95318E46D1D00D5E1C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CABFE95518E46D1D00D5E1C0 /* SegmentedViewControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentedViewControllerTests.m; sourceTree = "<group>"; };
+		CABFE96018E46D5D00D5E1C0 /* ALESegmentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALESegmentedViewController.h; sourceTree = "<group>"; };
+		CABFE96118E46D5D00D5E1C0 /* ALESegmentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALESegmentedViewController.m; sourceTree = "<group>"; };
+		CABFE96318E46DEF00D5E1C0 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		CABFE96418E46DEF00D5E1C0 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		CABFE96518E46DEF00D5E1C0 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		CABFE96818E46E2700D5E1C0 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		CABFE96918E46E2700D5E1C0 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		CABFE96A18E46E2700D5E1C0 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +120,15 @@
 		CABFE92D18E46D1D00D5E1C0 /* SegmentedViewController */ = {
 			isa = PBXGroup;
 			children = (
+				CABFE95F18E46D3B00D5E1C0 /* ALESegmentedViewController */,
 				CABFE93618E46D1D00D5E1C0 /* ALEAppDelegate.h */,
 				CABFE93718E46D1D00D5E1C0 /* ALEAppDelegate.m */,
-				CABFE93918E46D1D00D5E1C0 /* Main_iPhone.storyboard */,
-				CABFE93C18E46D1D00D5E1C0 /* Main_iPad.storyboard */,
-				CABFE93F18E46D1D00D5E1C0 /* ALEViewController.h */,
-				CABFE94018E46D1D00D5E1C0 /* ALEViewController.m */,
+				CABFE96318E46DEF00D5E1C0 /* FirstViewController.h */,
+				CABFE96418E46DEF00D5E1C0 /* FirstViewController.m */,
+				CABFE96518E46DEF00D5E1C0 /* FirstViewController.xib */,
+				CABFE96818E46E2700D5E1C0 /* SecondViewController.h */,
+				CABFE96918E46E2700D5E1C0 /* SecondViewController.m */,
+				CABFE96A18E46E2700D5E1C0 /* SecondViewController.xib */,
 				CABFE94218E46D1D00D5E1C0 /* Images.xcassets */,
 				CABFE92E18E46D1D00D5E1C0 /* Supporting Files */,
 			);
@@ -153,6 +162,15 @@
 				CABFE95218E46D1D00D5E1C0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CABFE95F18E46D3B00D5E1C0 /* ALESegmentedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CABFE96018E46D5D00D5E1C0 /* ALESegmentedViewController.h */,
+				CABFE96118E46D5D00D5E1C0 /* ALESegmentedViewController.m */,
+			);
+			path = ALESegmentedViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +250,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CABFE93E18E46D1D00D5E1C0 /* Main_iPad.storyboard in Resources */,
+				CABFE96718E46DEF00D5E1C0 /* FirstViewController.xib in Resources */,
+				CABFE96C18E46E2700D5E1C0 /* SecondViewController.xib in Resources */,
 				CABFE94318E46D1D00D5E1C0 /* Images.xcassets in Resources */,
-				CABFE93B18E46D1D00D5E1C0 /* Main_iPhone.storyboard in Resources */,
 				CABFE93218E46D1D00D5E1C0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,8 +272,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABFE96B18E46E2700D5E1C0 /* SecondViewController.m in Sources */,
+				CABFE96218E46D5D00D5E1C0 /* ALESegmentedViewController.m in Sources */,
 				CABFE93418E46D1D00D5E1C0 /* main.m in Sources */,
-				CABFE94118E46D1D00D5E1C0 /* ALEViewController.m in Sources */,
+				CABFE96618E46DEF00D5E1C0 /* FirstViewController.m in Sources */,
 				CABFE93818E46D1D00D5E1C0 /* ALEAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,22 +305,6 @@
 				CABFE93118E46D1D00D5E1C0 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		CABFE93918E46D1D00D5E1C0 /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CABFE93A18E46D1D00D5E1C0 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		CABFE93C18E46D1D00D5E1C0 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CABFE93D18E46D1D00D5E1C0 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		CABFE95218E46D1D00D5E1C0 /* InfoPlist.strings */ = {
