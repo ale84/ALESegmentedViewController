@@ -42,23 +42,25 @@
     self.segmentedControl.translatesAutoresizingMaskIntoConstraints = NO;
     
     UIBarButtonItem *buttonItem = [[UIBarButtonItem alloc]initWithCustomView:self.segmentedControl];
-    UIBarButtonItem *flexibleLeftSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
-    UIBarButtonItem *flexibleRightSpace = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
-    [toolbar setItems:@[flexibleLeftSpace, buttonItem, flexibleRightSpace]];
+    [toolbar setItems:@[buttonItem]];
     toolbar.translatesAutoresizingMaskIntoConstraints = NO;
  
     self.containerView = [[UIView alloc]initWithFrame:CGRectMake(0, 44, 320, 416)];
     _containerView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_containerView];
     
-    [self.view addConstraint:[NSLayoutConstraint constraintWithItem:self.segmentedControl
-                                                          attribute:NSLayoutAttributeWidth
-                                                          relatedBy:NSLayoutRelationLessThanOrEqual
-                                                             toItem:toolbar
-                                                          attribute:NSLayoutAttributeWidth
-                                                         multiplier:1
-                                                           constant:-20]];
+    [toolbar addConstraint:[NSLayoutConstraint constraintWithItem:self.segmentedControl
+                                                             attribute:NSLayoutAttributeCenterY
+                                                             relatedBy:NSLayoutRelationEqual
+                                                                toItem:toolbar
+                                                             attribute:NSLayoutAttributeCenterY
+                                                            multiplier:1
+                                                              constant:0]];
+    
+    [toolbar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_segmentedControl]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_segmentedControl)]];
+    
+    [toolbar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_segmentedControl]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_segmentedControl)]];
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_containerView]|"
                                                                       options:0
@@ -87,12 +89,6 @@
     
     [self buildSegmentedControl];
     [self showViewControllerAtIndex:0];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - action methods
@@ -157,18 +153,14 @@
     for (int i = 0; i < [_viewControllers count]; i++) {
         UIViewController *viewController = self.viewControllers[i];
         [self.segmentedControl insertSegmentWithTitle:viewController.title atIndex:i animated:NO];
-        [self.segmentedControl sizeToFit];
     }
+    [self.segmentedControl sizeToFit];
 }
 
 #pragma mark - setters/getters
 
 - (void)setViewControllers:(NSArray *)viewControllers
 {
-//    UIViewController *selectedViewController = self.viewControllers[self.selectedViewControllerIndex];
-//    [selectedViewController removeFromParentViewController];
-//    [selectedViewController.view removeFromSuperview];
-    
     _viewControllers = viewControllers;
     
     if (self.isViewLoaded) {    //se la view non è ancora caricata, non deve aggiornare
