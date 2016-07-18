@@ -1,7 +1,7 @@
 ALESegmentedViewController
 ==========================
 
-A custom container view controller that allows to switch between childs using a SegmentedControl
+A custom container view controller that allows to switch between children using a SegmentedControl
 
 Usage
 ==========================
