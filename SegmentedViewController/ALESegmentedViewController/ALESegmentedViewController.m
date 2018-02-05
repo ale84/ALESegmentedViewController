@@ -50,17 +50,22 @@
     _containerView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_containerView];
     
-    [toolbar addConstraint:[NSLayoutConstraint constraintWithItem:self.segmentedControl
-                                                             attribute:NSLayoutAttributeCenterY
-                                                             relatedBy:NSLayoutRelationEqual
-                                                                toItem:toolbar
-                                                             attribute:NSLayoutAttributeCenterY
-                                                            multiplier:1
-                                                              constant:0]];
-    
-    [toolbar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_segmentedControl]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_segmentedControl)]];
-    
-    [toolbar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_segmentedControl]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_segmentedControl)]];
+    NSProcessInfo *info = [NSProcessInfo processInfo];
+    NSOperatingSystemVersion ios11_0_0 = (NSOperatingSystemVersion){11, 0, 0};
+    if ([info isOperatingSystemAtLeastVersion:ios11_0_0] == NO) {
+        // !!!: For some reason, these crash in iOS > 11. :( But the good news is that they are no longer necessary!
+        [toolbar addConstraint:[NSLayoutConstraint constraintWithItem:self.segmentedControl
+                                                            attribute:NSLayoutAttributeCenterY
+                                                            relatedBy:NSLayoutRelationEqual
+                                                               toItem:toolbar
+                                                            attribute:NSLayoutAttributeCenterY
+                                                           multiplier:1
+                                                             constant:0]];
+        
+        [toolbar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-10-[_segmentedControl]-10-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_segmentedControl)]];
+        
+        [toolbar addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-[_segmentedControl]-|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_segmentedControl)]];
+    }
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_containerView]|"
                                                                       options:0
